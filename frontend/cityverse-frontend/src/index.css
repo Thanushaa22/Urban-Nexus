@@ -1,0 +1,115 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #000;
+  color: white;
+  font-family: Inter, Arial, sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+input,
+textarea,
+select,
+button {
+  font-family: inherit;
+}
+
+/* Premium Scrollbar */
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 0, 0, 0.4);
+}
+
+/* Firefox */
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.15) #050505;
+}
+
+/* Selection */
+
+::selection {
+  background: rgba(255, 0, 0, 0.35);
+  color: white;
+}
+
+/* Leaflet Map Fix */
+
+.leaflet-container {
+  background: #050505 !important;
+  z-index: 1;
+}
+
+.leaflet-popup-content-wrapper {
+  background: #0f0f0f;
+  color: white;
+  border: 1px solid rgba(255, 0, 0, 0.2);
+  border-radius: 14px;
+}
+
+.leaflet-popup-tip {
+  background: #0f0f0f;
+}
+
+/* Smooth Animations */
+
+* {
+  transition-property:
+    background-color,
+    border-color,
+    color,
+    box-shadow,
+    transform;
+  transition-duration: 200ms;
+}
+
+/* Premium Glass Cards */
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Dashboard Glow */
+
+.red-glow {
+  box-shadow:
+    0 0 20px rgba(255, 0, 0, 0.15),
+    0 0 40px rgba(255, 0, 0, 0.08);
+}
