@@ -96,8 +96,8 @@ MySQL Database
 ## DevOps
 - Git
 - GitHub
-- Docker *(Planned)*
-- Kubernetes *(Planned)*
+- Docker 
+- Kubernetes
 
 ## AI & Analytics
 - Python
