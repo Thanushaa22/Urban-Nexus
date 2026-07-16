@@ -34,7 +34,7 @@ The platform integrates secure REST APIs, role-based access control, predictive 
 - Traffic Monitoring
 - Congestion Analysis
 - Urban Mobility Insights
-- Smart Route Planning *(Upcoming)*
+- Smart Route Planning 
 
 ### 🌍 Smart City Administration
 - City Information Management
