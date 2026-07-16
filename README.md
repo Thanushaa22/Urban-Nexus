@@ -332,7 +332,7 @@ Authorization: Bearer YOUR_JWT_TOKEN
 
 ---
 
-# 🐳 Docker (Upcoming)
+# 🐳 Docker
 
 ```bash
 docker compose up --build
