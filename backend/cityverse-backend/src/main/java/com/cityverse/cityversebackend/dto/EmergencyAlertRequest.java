@@ -4,7 +4,6 @@ import lombok.Data;
 
 @Data
 public class EmergencyAlertRequest {
-
     private String title;
     private String severity;
     private String location;

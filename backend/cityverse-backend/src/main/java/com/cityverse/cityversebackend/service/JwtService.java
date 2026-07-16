@@ -1,16 +1,21 @@
 package com.cityverse.cityversebackend.service;
 
-import io.jsonwebtoken.Jwts;
-import io.jsonwebtoken.SignatureAlgorithm;
+import io.jsonwebtoken.*;
+import io.jsonwebtoken.security.Keys;
 import org.springframework.stereotype.Service;
 
+import java.security.Key;
 import java.util.Date;
 
 @Service
 public class JwtService {
 
     private static final String SECRET =
-            "cityverse-secret-key-cityverse-secret-key";
+            "cityverse-secret-key-cityverse-secret-key-cityverse-secret-key";
+
+    private Key getSignKey() {
+        return Keys.hmacShaKeyFor(SECRET.getBytes());
+    }
 
     public String generateToken(String email) {
 
@@ -21,10 +26,21 @@ public class JwtService {
                         new Date(System.currentTimeMillis()
                                 + 1000 * 60 * 60 * 24)
                 )
-                .signWith(
-                        SignatureAlgorithm.HS256,
-                        SECRET.getBytes()
-                )
+                .signWith(getSignKey())
                 .compact();
+    }
+
+    public String extractUsername(String token) {
+
+        return Jwts.parser()
+                .verifyWith((javax.crypto.SecretKey) getSignKey())
+                .build()
+                .parseSignedClaims(token)
+                .getPayload()
+                .getSubject();
+    }
+
+    public boolean isTokenValid(String token, String email) {
+        return extractUsername(token).equals(email);
     }
 }

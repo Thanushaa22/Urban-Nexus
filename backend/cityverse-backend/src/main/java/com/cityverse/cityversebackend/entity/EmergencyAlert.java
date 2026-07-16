@@ -5,11 +5,10 @@ import lombok.*;
 
 @Entity
 @Table(name = "emergency_alerts")
-@Getter
-@Setter
+@Data
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder
 public class EmergencyAlert {
 
     @Id
@@ -17,10 +16,7 @@ public class EmergencyAlert {
     private Long id;
 
     private String title;
-
     private String severity;
-
     private String location;
-
     private String description;
 }

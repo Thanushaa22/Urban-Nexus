@@ -16,8 +16,10 @@ function Login() {
 
       localStorage.setItem("token", res.data);
 
-      alert("Login Successful");
-      window.location.href = "/dashboard";
+alert("Login Successful!");
+
+window.location.href = "/dashboard";
+
     } catch (err) {
       alert("Invalid Credentials");
       console.log(err);

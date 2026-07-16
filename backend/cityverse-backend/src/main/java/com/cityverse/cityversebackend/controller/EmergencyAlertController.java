@@ -11,14 +11,13 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/alerts")
 @RequiredArgsConstructor
+@CrossOrigin("*")
 public class EmergencyAlertController {
 
     private final EmergencyAlertRepository alertRepository;
 
     @PostMapping
-    public EmergencyAlert createAlert(
-            @RequestBody EmergencyAlertRequest request
-    ) {
+    public EmergencyAlert createAlert(@RequestBody EmergencyAlertRequest request) {
 
         EmergencyAlert alert = EmergencyAlert.builder()
                 .title(request.getTitle())
@@ -31,7 +30,7 @@ public class EmergencyAlertController {
     }
 
     @GetMapping
-    public List<EmergencyAlert> getAllAlerts() {
+    public List<EmergencyAlert> getAlerts() {
         return alertRepository.findAll();
     }
 }

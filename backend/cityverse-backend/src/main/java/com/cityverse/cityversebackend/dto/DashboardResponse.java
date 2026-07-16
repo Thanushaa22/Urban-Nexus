@@ -2,13 +2,11 @@ package com.cityverse.cityversebackend.dto;
 
 import lombok.*;
 
-@Getter
-@Setter
-@AllArgsConstructor
-@NoArgsConstructor
+@Data
 @Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class DashboardResponse {
-
     private Long totalCities;
     private Long totalHospitals;
     private Long totalTrafficRecords;

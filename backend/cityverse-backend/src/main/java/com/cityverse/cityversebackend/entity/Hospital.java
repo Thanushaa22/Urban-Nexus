@@ -5,11 +5,10 @@ import lombok.*;
 
 @Entity
 @Table(name = "hospitals")
-@Getter
-@Setter
+@Data
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder
 public class Hospital {
 
     @Id
@@ -17,14 +16,10 @@ public class Hospital {
     private Long id;
 
     private String hospitalName;
-
     private Integer totalBeds;
-
     private Integer availableBeds;
-
     private Integer icuBeds;
 
     @ManyToOne
-    @JoinColumn(name = "city_id")
     private City city;
 }
