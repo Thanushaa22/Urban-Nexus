@@ -351,7 +351,7 @@ GitHub Actions
 
 Building intelligent, scalable, and secure software solutions using Java, Spring Boot, React, Python, and modern cloud technologies.
 
-```
+
 <img width="1052" height="630" alt="UN_1" src="https://github.com/user-attachments/assets/6c49c1a1-4cd2-4414-ad34-d6327c2be92c" />
 <img width="1003" height="535" alt="UN_2" src="https://github.com/user-attachments/assets/37d7891b-adf4-4ad1-afaa-6203ed738cbc" />
 <img width="965" height="628" alt="UN_3" src="https://github.com/user-attachments/assets/86997bdb-63ed-43c9-b3eb-86c6bdd2894d" />
